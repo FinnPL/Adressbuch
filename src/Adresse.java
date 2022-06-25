@@ -13,6 +13,16 @@ public abstract class Adresse {
 
   // Anfang Methoden
 
+  public Adresse(String Name, String NName, String Strase, int hnummer, String ort, String land, String plz) {
+    this.Name = Name;
+    this.NName = NName;
+    this.Strase = Strase;
+    this.hnummer = hnummer;
+    this.ort = ort;
+    this.land = land;
+    this.plz = plz;
+  }
+
   public abstract void print();
 
   @Override
@@ -98,6 +108,10 @@ public abstract class Adresse {
 
   public String getStrase() {
     return Strase;
+  }
+
+  public String toFormatedString() {
+    return null;
   }
 
   // Ende Methoden

@@ -7,6 +7,10 @@ public class Adressbuch {
   private Adresse[] adressbuch = new Adresse[100];
   private int index = 0;
 
+  public String getAdressString(int nr) {
+    return adressbuch[nr].toFormatedString() + "\n";
+  }
+
   public void print(int nr) {
     adressbuch[nr].print();
   }
@@ -44,11 +48,11 @@ public class Adressbuch {
       String[] str = s.split(";");
 
       if (str[7] != null) {
-        add(new AdresseUK().fromString(s));
+        add(new AdresseUK(str[0], str[1], str[2], Integer.parseInt(str[3]), str[4], str[5], str[6], str[7]));
       } else if (str[8] != null) {
-        add(new AdresseUS().fromString(s));
+        add(new AdresseUS(str[0], str[1], str[2], Integer.parseInt(str[3]), str[4], str[5], str[6], str[8]));
       } else {
-        add(new AdresseDE().fromString(s));
+        add(new AdresseDE(str[0], str[1], str[2], Integer.parseInt(str[3]), str[4], str[5], str[6]));
       }
     }
   }
@@ -59,6 +63,10 @@ public class Adressbuch {
       nAdressbuch[i] = adressbuch[i];
     }
     return nAdressbuch;
+  }
+
+  public int getIndex() {
+    return index;
   }
 
 }
