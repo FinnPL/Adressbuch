@@ -5,8 +5,6 @@ public class AdresseUS extends Adresse {
     this.State = state;
   }
 
-  private String State;
-
   @Override
   public void print() {
     System.out.println(getName() + " " + getNName() + " \n" + getHnummer() + " " + getStrase() + " \n" + getOrt() + ", "
