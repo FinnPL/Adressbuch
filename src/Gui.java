@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import java.awt.event.ActionEvent;
@@ -27,7 +28,7 @@ public class Gui extends JFrame implements ActionListener {
 
     public void menu() {
         JFrame frame = new JFrame("Adress Menu");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
 
         button = new JButton("Add Adress");
@@ -51,7 +52,7 @@ public class Gui extends JFrame implements ActionListener {
 
     private void addAdress() throws ParseException {
         JFrame frame = new JFrame("Add Adress");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
 
         // Create 3 RadioButtons
@@ -198,7 +199,7 @@ public class Gui extends JFrame implements ActionListener {
 
     private void showAllAdresses() {
         JFrame frame = new JFrame("Adressbuch");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         JTextArea textArea = new JTextArea(20, 40);
