@@ -46,13 +46,14 @@ public class Adressbuch {
     while (scanman.hasNextLine()) {
       String s = scanman.nextLine();
       String[] str = s.split(";");
+      System.out.println(str[7] + str[8]);
 
-      if (str[7] != null) {
-        add(new AdresseUK(str[0], str[1], str[2], Integer.parseInt(str[3]), str[4], str[5], str[6], str[7]));
-      } else if (str[8] != null) {
-        add(new AdresseUS(str[0], str[1], str[2], Integer.parseInt(str[3]), str[4], str[5], str[6], str[8]));
-      } else {
+      if (str[7].equals("null") & str[8].equals("null")) {
         add(new AdresseDE(str[0], str[1], str[2], Integer.parseInt(str[3]), str[4], str[5], str[6]));
+      } else if (!str[7].equals("null")) {
+        add(new AdresseUK(str[0], str[1], str[2], Integer.parseInt(str[3]), str[4], str[5], str[6], str[7]));
+      } else if (!str[8].equals("null")) {
+        add(new AdresseUS(str[0], str[1], str[2], Integer.parseInt(str[3]), str[4], str[5], str[6], str[8]));
       }
     }
   }

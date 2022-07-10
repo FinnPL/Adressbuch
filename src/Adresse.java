@@ -31,21 +31,6 @@ public abstract class Adresse {
         + this.land + ";" + this.house + ";" + this.State + ";";
   }
 
-  @SuppressWarnings("unchecked")
-  public <T> T fromString(String s) {
-    String[] str = s.split(";");
-    this.Name = str[0];
-    this.NName = str[1];
-    this.Strase = str[2];
-    this.hnummer = Integer.valueOf(str[3]);
-    this.ort = str[4];
-    this.plz = str[5];
-    this.land = str[6];
-    this.house = str[7];
-    this.State = str[8];
-    return (T) this;
-  }
-
   public boolean equals(Adresse a) {
     if (this.Name.equals(a.getName()) && this.Name.equals(a.getName())) {
       return true;
