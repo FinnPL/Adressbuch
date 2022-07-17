@@ -144,8 +144,8 @@ public class Gui extends JFrame implements ActionListener {
 
                 } else if (radioButton3.isSelected()) {
                     adressbuch.add(new AdresseUS(firstname.getText(), name.getText(), street.getText(),
-                            Integer.valueOf(houseNumber.getText()), city.getText(), country.getText(),
-                            zipCode.getText(), state.getText()));
+                            Integer.valueOf(houseNumber.getText()), city.getText(), zipCode.getText(),
+                            country.getText(), state.getText()));
 
                 }
                 frame.dispose();

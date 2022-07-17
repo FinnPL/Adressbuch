@@ -12,8 +12,8 @@ public class AdresseUS extends Adresse {
   }
 
   public String toFormatedString() {
-    return (getName() + " " + getNName() + " \n" + getHnummer() + " " + getStrase() + " \n" + getPlz() + ", "
-        + getState() + " " + getOrt() + " \n" + getLand());
+    return (getName() + " " + getNName() + " \n" + getHnummer() + " " + getStrase() + " \n" + getOrt() + ", "
+        + getState() + " " + getPlz() + " \n" + getLand());
   }
 
   public String getState() {
